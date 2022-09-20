@@ -13,7 +13,7 @@
   }
 }
 
-.App-header {
+.App-body {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,6 +22,12 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.New-body {
+  width: 1px;
+  margin: 100px auto;
+  background: rgb(93, 92, 114);
 }
 
 .App-link {
@@ -35,4 +41,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.file {
+  background-color: #fde6bc;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-color: rgb(167, 132, 93);
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  transform: skewY(-7deg);
+  transition: transform 0.5s;
+}
+
+.file:hover {
+  transform: translateX(-35px);
+  transform: translateY(-35px);
 }

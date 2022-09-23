@@ -1,10 +1,22 @@
 # Elijah Nucum's Personal Website
 
-Welcome to my personal website! 
+**Welcome to my personal website!**
 
-Will be posting here for updates on the site...
+The site is still a work in progress, but is getting there! 
+Watch here for updates on the site...
 
-Technologies used:
+### To-do:
 
-react-bootstrap
-mdi/react mdi/js
+- ~~Redesign and fix file components~~
+- ~~Add functional date/time to menu bar~~
+- Fix grid in folder window
+- Complete About Me Section
+- Add functionality to contact me icon in menu bar
+- Design and implement footer
+
+### Technologies used:
+
+- react-bootstrap
+- mdi/react mdi/js
+- react-draggable
+- react-transition-group

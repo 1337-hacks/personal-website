@@ -1,13 +1,20 @@
 import React from "react";
+import { mdiFileDocument } from '@mdi/js';
+import Icon from '@mdi/react';
 
 function File(props) {
 
     return(
         <div
             className="file"
-            style={{left: props.offsetLeft, top: props.offsetTop, backgroundColor: props.bgColor}}
             onClick={()=> props.sectionSelected(props.section)}
         >
+            <Icon
+                path={mdiFileDocument}
+                title={props.fileName}
+                size={2}
+                color="white"
+            />
             <p style={{fontSize: "10px"}}>{props.fileName}</p>
         </div>
     )

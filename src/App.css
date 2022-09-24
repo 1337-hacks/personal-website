@@ -15,6 +15,10 @@ p {
   font-size: 1.5em;
 }
 
+
+
+/**************************** APP WINDOW *******************************/
+
 .App-body {
   /* background-color: #151415; */
   background-color: #212121;
@@ -60,24 +64,6 @@ p {
   border-radius: 5px 5px 0px 0px;
 }
 
-.row-padding {
-  padding-top: 25px;
-}
-
-.about-me {
-  background-color: #0A0A0A;
-  color: rgb(196, 196, 196);
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  font-size: 0.8em;
-}
-
-.dp {
-  width: 300px;
-  border-radius: 5px;
-}
 
 .window-menu {
   position: absolute;
@@ -93,8 +79,35 @@ p {
   background-color: #0A0A0A;
 }
 
+
+
+/**************************** SECTIONS *******************************/
+
+.about-me {
+  background-color: #0A0A0A;
+  color: rgb(196, 196, 196);
+  height: 150vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.8em;
+}
+
+.dp {
+  width: 300px;
+  border-radius: 5px;
+}
+
+
+
+/**************************** UTILITIES *******************************/
+
 .vert-center {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.row-padding {
+  padding-top: 25px;
 }

@@ -9,10 +9,12 @@ Watch here for updates on the site...
 
 - ~~Redesign and fix file components~~
 - ~~Add functional date/time to menu bar~~
-- Fix grid in folder window
-- Complete About Me Section
+- ~~Fix grid in folder window~~
+- Design and implement About Me section
 - Add functionality to contact me icon in menu bar
 - Design and implement footer
+- Add message on monitor
+- Design and implement loading screen
 
 ### Technologies used:
 

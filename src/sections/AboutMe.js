@@ -63,6 +63,11 @@ function AboutMe() {
                         </p>
                     </Col>
                 </Row>
+                <Row style={{paddingTop: "100px"}}>
+                    <Col align="center">
+                        <h2>Current technologies learning</h2>
+                    </Col>
+                </Row>
             </Container>
         </div>
     );

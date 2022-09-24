@@ -1,7 +1,7 @@
 import './App.css';
 import React, {useState, useEffect, createRef} from 'react';
 import File from './File';
-import AboutMe from './AboutMe';
+import AboutMe from './sections/AboutMe';
 import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -12,6 +12,8 @@ import Footer from './Footer';
 import Draggable, {DraggableCore} from 'react-draggable';
 import Fade from 'react-bootstrap/Fade';
 import { mdiCloseCircle } from '@mdi/js';
+
+import GridSystem from './GridSystem';
 
 import Stack from 'react-bootstrap/Stack';
 import { mdiLinkedin } from '@mdi/js';
@@ -68,17 +70,17 @@ function App() {
                 <p>my-folder</p>
               </div>
 
-              <Draggable handle=".handle">
+              <Draggable handle=".folder-handle" bounds=".App-body">
                 <Fade in={folderSelect}>
                 <Container className="folder-window">
-                  <Row className="handle">
+                  <Row className="folder-handle">
                     <Col xs={2} align="left">
                       <Button variant="link" onClick={() => setFolderSelect(false)}>
-                      <Icon
-                        path={mdiCloseCircle}
-                        size={1}
-                        color="#CF5C36"
-                      />
+                        <Icon
+                          path={mdiCloseCircle}
+                          size={1}
+                          color="#CF5C36"
+                        />
                       </Button>
                     </Col>
                     <Col>
@@ -87,7 +89,7 @@ function App() {
                     <Col xs={2}></Col>
                   </Row>
                   <Row>
-                    {/* <Stack gap={5} direction="horizontal"> */}
+                    <GridSystem colCount={2} md={6}>
                       {
                         presetFiles.map((file, index) => {
                           const posOffset = index * 12;
@@ -105,8 +107,7 @@ function App() {
                           )
                         })
                       }
-                    {/* </Stack> */}
-                    
+                    </GridSystem>         
                   </Row>
                 </Container>
                 </Fade>

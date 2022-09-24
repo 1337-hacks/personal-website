@@ -3,15 +3,8 @@ import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import imageOfMe from '../images/me.jpg';
-import Stack from 'react-bootstrap/Stack';
 
 function AboutMe() {
-
-    const greetings = {
-        morning: "morning",
-        afternoon: "afternoon",
-        evening: "evening"
-    }
 
     const [greeting, setGreeting] = useState("xxx");
 
@@ -26,13 +19,13 @@ function AboutMe() {
 
     useEffect(()=> {
         if(time < 12) {
-            setGreeting(greetings.morning);
+            setGreeting("morning");
         }
-        else if(time < 18) {
-            setGreeting(greetings.afternoon);
+        else if(time >= 12 && time < 18) {
+            setGreeting("afternoon");
         }
         else {
-            setGreeting(greetings.evening);
+            setGreeting("evening");
         }
     }, [time]);
 

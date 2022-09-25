@@ -98,6 +98,31 @@ p {
   border-radius: 5px;
 }
 
+.learning-card {
+  background-color: rgb(41, 41, 41);
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.learning-card:hover {
+  cursor: pointer;
+  background-color: rgb(31, 31, 31);
+}
+
+@keyframes learning-card-hover {
+  0% {
+    background-color: rgb(41, 41, 41);
+  }
+
+  100% {
+    background-color: rgb(31, 31, 31);
+  }
+}
+
 
 
 /**************************** UTILITIES *******************************/
@@ -106,6 +131,11 @@ p {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.horiz-center {
+  width: 50%;
+  margin: 0 auto;
 }
 
 .row-padding {

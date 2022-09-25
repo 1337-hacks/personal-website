@@ -83,7 +83,7 @@ function App() {
                         />
                       </Button>
                     </Col>
-                    <Col>
+                    <Col className="vert-center" align="center">
                       my-folder
                     </Col>
                     <Col xs={2}></Col>

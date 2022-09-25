@@ -3,6 +3,12 @@ import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import imageOfMe from '../images/me.jpg';
+import Stack from 'react-bootstrap/Stack';
+import ProgressBar from 'react-bootstrap/ProgressBar';
+import Icon from '@mdi/react';
+import { mdiTailwind } from '@mdi/js'; 
+import { mdiReact } from '@mdi/js'; 
+import { mdiLanguageTypescript } from '@mdi/js';
 
 function AboutMe() {
 
@@ -56,9 +62,82 @@ function AboutMe() {
                         </p>
                     </Col>
                 </Row>
+                <Row style={{paddingTop: "100px", paddingLeft: "50px"}}>
+                    <Col style={{paddingLeft: "0px"}} md={6}>
+                        <Stack gap={3}>
+                            <h2>A bit about me...</h2>
+                            <ul>
+                                <Stack gap={3}>
+                                    <li><p>Well-versed in JavaScript, HTML, CSS</p></li>
+                                    <li><p>Has experience with SQL, PHP, Python, C and C#</p></li>
+                                    <li><p>A keen learner of web technologies</p></li>
+                                    <li><p>Knowledgeable in Agile development</p></li>
+                                    <li><p>An active person who is into weightlifting and playing badminton</p></li>
+                                    <li><p>Loves listening to music</p></li>
+                                    <li><p>A veteran in Clash of Clans</p></li>
+                                </Stack>
+                            </ul>
+                        </Stack>
+                    </Col>
+                    <Col md={5} style={{paddingLeft: "150px"}}>
+                        <Stack gap={5}>
+                            <div>
+                                React Node Development
+                                <ProgressBar animated now={90}/>
+                            </div>
+                            <div>
+                                Agile Methodologies
+                                <ProgressBar animated now={80}/>
+                            </div>
+                            <div>
+                                Project Management
+                                <ProgressBar animated now={75}/>
+                            </div>
+                            
+                        </Stack>
+                    </Col>
+                </Row>
                 <Row style={{paddingTop: "100px"}}>
                     <Col align="center">
-                        <h2>Current technologies learning</h2>
+                        <h2>Current technologies learning:</h2>
+                    </Col>
+                </Row>
+                <Row align="center" style={{paddingTop: "40px"}}>
+                    <Col>
+                    <a href="https://tailwindcss.com/">
+                        <div className="learning-card" >
+                            <Icon 
+                                path={mdiTailwind}
+                                size={3}
+                                color="#E37C7C"
+                            />
+                        </div>
+                    </a>
+                    <p>Tailwind CSS</p>
+                    </Col>
+                    <Col>
+                    <a href="https://redux.js.org/">
+                        <div className="learning-card" >
+                            <Icon 
+                                path={mdiReact}
+                                size={3}
+                                color="#7C86E3"
+                            />
+                        </div>
+                    </a> 
+                    <p>Redux</p>
+                    </Col>
+                    <Col>
+                    <a href="https://www.typescriptlang.org/">
+                        <div className="learning-card">
+                            <Icon 
+                                path={mdiLanguageTypescript}
+                                size={3}
+                                color="#7CE386"
+                            />
+                        </div>
+                    </a>   
+                    <p>TypeScript</p>
                     </Col>
                 </Row>
             </Container>

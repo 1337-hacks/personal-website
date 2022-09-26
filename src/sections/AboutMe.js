@@ -104,39 +104,39 @@ function AboutMe() {
                 </Row>
                 <Row align="center" style={{paddingTop: "40px"}}>
                     <Col>
-                    <a href="https://tailwindcss.com/">
                         <div className="learning-card" >
+                            <a href="https://tailwindcss.com/">
                             <Icon 
                                 path={mdiTailwind}
                                 size={3}
                                 color="#E37C7C"
                             />
+                            </a>
                         </div>
-                    </a>
                     <p>Tailwind CSS</p>
                     </Col>
                     <Col>
-                    <a href="https://redux.js.org/">
                         <div className="learning-card" >
+                            <a href="https://redux.js.org/">
                             <Icon 
                                 path={mdiReact}
                                 size={3}
                                 color="#7C86E3"
                             />
+                            </a>
                         </div>
-                    </a> 
                     <p>Redux</p>
                     </Col>
                     <Col>
-                    <a href="https://www.typescriptlang.org/">
                         <div className="learning-card">
+                            <a href="https://www.typescriptlang.org/">
                             <Icon 
                                 path={mdiLanguageTypescript}
                                 size={3}
                                 color="#7CE386"
                             />
+                            </a> 
                         </div>
-                    </a>   
                     <p>TypeScript</p>
                     </Col>
                 </Row>

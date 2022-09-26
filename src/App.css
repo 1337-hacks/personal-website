@@ -83,14 +83,18 @@ p {
 
 /**************************** SECTIONS *******************************/
 
+.section {
+  display: block;
+  overflow: auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .about-me {
   background-color: #0A0A0A;
   color: rgb(196, 196, 196);
-  height: 150vh;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
   font-size: 0.8em;
+  padding: 100px 0px;
 }
 
 .dp {
@@ -121,6 +125,12 @@ p {
   100% {
     background-color: rgb(31, 31, 31);
   }
+}
+
+.comfort-ai {
+  background-color: #0A0A0A;
+  color: rgb(196, 196, 196);
+  font-size: 0.8em;
 }
 
 

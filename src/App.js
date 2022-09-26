@@ -2,6 +2,7 @@ import './App.css';
 import React, {useState, useEffect, createRef} from 'react';
 import File from './File';
 import AboutMe from './sections/AboutMe';
+import ComfortAi from './sections/ComfortAi';
 import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -26,6 +27,7 @@ function App() {
   const presetFiles = [
     {section: "project-notes", fileName: "Project:NOTES"}, 
     {section: "personal-website", fileName: "Personal Website"}, 
+    {section: "comfort-ai", fileName: "Comfort.AI"}, 
     {section: "about", fileName: "About Elijah"}
   ]
 
@@ -83,7 +85,7 @@ function App() {
                         />
                       </Button>
                     </Col>
-                    <Col className="vert-center" align="center">
+                    <Col align="center">
                       my-folder
                     </Col>
                     <Col xs={2}></Col>
@@ -160,6 +162,8 @@ function App() {
           <div ref={scrollRef}>Project:NOTES</div>
           : fileSelect === "personal-website" ?
           <div ref={scrollRef}>Personal Website</div>
+          : fileSelect === "comfort-ai" ?
+          <div ref={scrollRef}><ComfortAi/></div> 
           : fileSelect === "about" ?
           <div ref={scrollRef}><AboutMe/></div>
           : <div ref={scrollRef}></div>

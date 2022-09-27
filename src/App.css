@@ -149,6 +149,11 @@ p {
 	}
 }
 
+.comfort-ai-sc {
+  width: 85%;
+  border-radius: 10px;
+}
+
 .section:hover {
   cursor: default;
 }

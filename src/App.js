@@ -10,7 +10,7 @@ import Icon from '@mdi/react';
 import { mdiFolder } from '@mdi/js';
 import Footer from './Footer';
 
-import Draggable, {DraggableCore} from 'react-draggable';
+import Draggable from 'react-draggable';
 import Fade from 'react-bootstrap/Fade';
 import { mdiCloseCircle } from '@mdi/js';
 
@@ -41,6 +41,7 @@ function App() {
   }
 
   useEffect(()=> {
+    
     scrollRef.current.scrollIntoView({ behavior: "smooth" });
   }, [fileSelect]);
 
@@ -169,7 +170,7 @@ function App() {
           : <div ref={scrollRef}></div>
       }
 
-      {/* <Footer/> */}
+      {/* {fileSelect && <Footer/>} */}
     </>
     
   );

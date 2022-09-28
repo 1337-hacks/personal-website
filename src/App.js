@@ -3,6 +3,7 @@ import React, {useState, useEffect, createRef} from 'react';
 import File from './File';
 import AboutMe from './sections/AboutMe';
 import ComfortAi from './sections/ComfortAi';
+import ProjectNotes from './sections/ProjectNotes';
 import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -160,7 +161,7 @@ function App() {
       
       { 
         fileSelect === "project-notes" ?
-          <div ref={scrollRef}>Project:NOTES</div>
+          <div ref={scrollRef}><ProjectNotes/></div>
           : fileSelect === "personal-website" ?
           <div ref={scrollRef}>Personal Website</div>
           : fileSelect === "comfort-ai" ?

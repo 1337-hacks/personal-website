@@ -3,7 +3,6 @@ import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Stack from 'react-bootstrap/Stack';
-import ComfortAiVideo from '../media/comfort-ai.mp4';
 import ComfortAiSC from '../media/comfort-ai-sc.jpg';
 
 
@@ -15,14 +14,10 @@ function ComfortAi() {
                     <Col className="vert-center">
                         <h1>Comfort.AI Website</h1>
                     </Col>
-                    <Col></Col>
                 </Row>
                 <Row style={{paddingTop: "30px"}}>
                     <Col align="center">
-                        {/* <div style={{borderRadius: "25px"}}>
-                            <video autoPlay loop width="400" height="400"><source src={ComfortAiVideo}/></video>
-                        </div> */}
-                        <img src={ComfortAiSC} alt="comfort-ai-screenshot" className="comfort-ai-sc"/>
+                        <img src={ComfortAiSC} alt="comfort-ai-screenshot" className="section-sc"/>
                     </Col>
                 </Row>
                 <Row style={{paddingTop: "70px"}}>

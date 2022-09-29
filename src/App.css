@@ -64,6 +64,17 @@ p {
   border-radius: 5px 5px 0px 0px;
 }
 
+.notif-window {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  background-color: rgba(226, 226, 226, 0.575);
+  border-radius: 5px;
+  display: block;
+  overflow: auto;
+  width: 20%;
+  font-size: 15px;
+}
 
 .window-menu {
   position: absolute;
@@ -154,7 +165,10 @@ p {
   border-radius: 10px;
 }
 
-
+.this-website {
+  background-color: #0A0A0A;
+  height: 100vh;
+}
 
 .section:hover {
   cursor: default;

@@ -4,6 +4,7 @@ import File from './File';
 import AboutMe from './sections/AboutMe';
 import ComfortAi from './sections/ComfortAi';
 import ProjectNotes from './sections/ProjectNotes';
+import ThisWebsite from './sections/ThisWebsite';
 import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -42,7 +43,6 @@ function App() {
   }
 
   useEffect(()=> {
-    
     scrollRef.current.scrollIntoView({ behavior: "smooth" });
   }, [fileSelect]);
 
@@ -56,6 +56,23 @@ function App() {
       setTime(newTime);
     }, 1000)
   }, [time])
+
+  const [welcomeNotif, setWelcomeNotif] = useState(false);
+  const [welcomeBuffer, setWelcomeBuffer] = useState(false);
+
+  useEffect(()=> {
+    if(welcomeBuffer) {
+      console.log("Entered");
+    }
+    else {
+      const timer = setTimeout(()=> setWelcomeNotif(true), 2000);
+      return (()=> clearTimeout(timer));
+    }
+  }, [welcomeNotif]);
+
+  useEffect(()=> {
+    setWelcomeBuffer(true);
+  }, [welcomeBuffer]);
 
   return (
     <>
@@ -117,6 +134,34 @@ function App() {
                 </Fade>
               </Draggable>
 
+              <Draggable handle=".welcome-handle" bounds=".App-body">
+                <Fade in={welcomeNotif}>
+                  <Container className="notif-window">
+                    <Row className="welcome-handle">
+                      <Col xs={2} align="left">
+                        <Button variant="link" onClick={() => setWelcomeNotif(false)}>
+                          <Icon
+                            path={mdiCloseCircle}
+                            size={1}
+                            color="#CF5C36"
+                          />
+                        </Button>
+                      </Col>
+                      <Col align="center">
+                        welcome-user!
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col align="left">
+                        <p>
+                          Hello user, welcome to my personal site! Feel free to look around and chill B) - Elijah
+                        </p>
+                      </Col>
+                    </Row>
+                  </Container>
+                </Fade>
+              </Draggable>
+
             </Col>
           </Row>
           
@@ -163,7 +208,7 @@ function App() {
         fileSelect === "project-notes" ?
           <div ref={scrollRef}><ProjectNotes/></div>
           : fileSelect === "personal-website" ?
-          <div ref={scrollRef}>Personal Website</div>
+          <div ref={scrollRef}><ThisWebsite/></div>
           : fileSelect === "comfort-ai" ?
           <div ref={scrollRef}><ComfortAi/></div> 
           : fileSelect === "about" ?

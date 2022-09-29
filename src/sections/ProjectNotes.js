@@ -59,7 +59,6 @@ function ProjectNotes() {
                         </Col>
                     </Row>
                 </Stack>
-                
             </Container>
         </div>
     );

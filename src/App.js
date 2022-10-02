@@ -44,9 +44,19 @@ function App() {
 
   useEffect(()=> {
     scrollRef.current.scrollIntoView({ behavior: "smooth" });
-  }, [fileSelect]);
+  }, [fileSelect])
 
   const [folderSelect, setFolderSelect] = useState(false);
+  const [disableWindows, setDisableWindows] = useState(true);
+
+  useEffect(()=> {
+    if(folderSelect) {
+      setDisableWindows(false);
+    }
+    else {
+      setDisableWindows(true);
+    }
+  }, [folderSelect])
 
   const [time, setTime] = useState(new Date());
 
@@ -59,20 +69,31 @@ function App() {
 
   const [welcomeNotif, setWelcomeNotif] = useState(false);
   const [welcomeBuffer, setWelcomeBuffer] = useState(false);
+  const [disableWelcome, setDisableWelcome] = useState(false);
 
   useEffect(()=> {
     if(welcomeBuffer) {
-      console.log("Entered");
+      // no action
     }
     else {
       const timer = setTimeout(()=> setWelcomeNotif(true), 2000);
       return (()=> clearTimeout(timer));
     }
-  }, [welcomeNotif]);
+  }, [welcomeNotif])
+
+  useEffect(()=> {
+    console.log(welcomeNotif);
+    if(welcomeNotif === false) {
+      setDisableWelcome(true);
+    }
+    else {
+      setDisableWelcome(false);
+    }
+  }, [welcomeNotif])
 
   useEffect(()=> {
     setWelcomeBuffer(true);
-  }, [welcomeBuffer]);
+  }, [welcomeBuffer])
 
   return (
     <>
@@ -91,12 +112,12 @@ function App() {
                 <p>my-folder</p>
               </div>
 
-              <Draggable handle=".folder-handle" bounds=".App-body">
+              <Draggable handle=".folder-handle" bounds=".App-body" disabled={disableWindows}>
                 <Fade in={folderSelect}>
                 <Container className="folder-window">
-                  <Row className="folder-handle">
+                  <Row className="folder-handle vert-center">
                     <Col xs={2} align="left">
-                      <Button variant="link" onClick={() => setFolderSelect(false)}>
+                      <Button variant="link" onClick={() => setFolderSelect(false)} disabled={disableWindows}>
                         <Icon
                           path={mdiCloseCircle}
                           size={1}
@@ -105,7 +126,7 @@ function App() {
                       </Button>
                     </Col>
                     <Col align="center">
-                      my-folder
+                      <p className="window-title">my-folder</p>
                     </Col>
                     <Col xs={2}></Col>
                   </Row>
@@ -124,6 +145,7 @@ function App() {
                               offsetLeft={offsetLeft}
                               offsetTop={offsetTop}
                               bgColor={presetColorFiles[index]}
+                              disabled={disableWindows}
                             />
                           )
                         })
@@ -134,12 +156,12 @@ function App() {
                 </Fade>
               </Draggable>
 
-              <Draggable handle=".welcome-handle" bounds=".App-body">
+              <Draggable handle=".welcome-handle" bounds=".App-body" disabled={disableWelcome}>
                 <Fade in={welcomeNotif}>
                   <Container className="notif-window">
-                    <Row className="welcome-handle">
+                    <Row className="welcome-handle vert-center">
                       <Col xs={2} align="left">
-                        <Button variant="link" onClick={() => setWelcomeNotif(false)}>
+                        <Button variant="link" onClick={() => setWelcomeNotif(false)} disabled={disableWelcome}>
                           <Icon
                             path={mdiCloseCircle}
                             size={1}
@@ -148,7 +170,7 @@ function App() {
                         </Button>
                       </Col>
                       <Col align="center">
-                        welcome-user!
+                        <p className="window-title">welcome-user!</p>
                       </Col>
                     </Row>
                     <Row>

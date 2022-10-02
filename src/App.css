@@ -1,5 +1,6 @@
 h1, h2, h3, h4, h5 {
   font-family: 'Raleway', sans-serif;
+  margin: 0;
 }
 
 .section h1 {
@@ -9,6 +10,13 @@ h1, h2, h3, h4, h5 {
 p {
   font-family: 'Inter', sans-serif;
   color: rgb(196, 196, 196);
+  cursor: default;
+}
+
+p.window-title {
+  color: rgb(255, 255, 255);
+  cursor: default;
+  margin: 0;
 }
 
 .section p {
@@ -31,7 +39,6 @@ p {
 }
 
 .file {
-  cursor: pointer;
   font-family: 'Raleway', sans-serif;
   display: inline-block;
   font-size: 15px;
@@ -180,7 +187,6 @@ p {
 .vert-center {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .horiz-center {

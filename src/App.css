@@ -71,7 +71,7 @@ p.window-title {
   border-radius: 5px 5px 0px 0px;
 }
 
-.notif-window {
+.welcome-window {
   position: absolute;
   top: 10%;
   right: 10%;
@@ -83,7 +83,11 @@ p.window-title {
   font-size: 15px;
 }
 
-.window-menu {
+.welcome-handle {
+  background-color: rgba(226, 226, 226, 0.322);
+}
+
+.window-taskbar {
   position: absolute;
   left: 0px;
   bottom: 0px;
@@ -181,6 +185,19 @@ p.window-title {
   cursor: default;
 }
 
+/**************************** SECTION FOOTERS *******************************/
+
+.project-notes-footer {
+  width: 100%;
+  padding: 100px 0px 100px 0px;
+  background-color: #2e2e2e;
+  color: rgb(196, 196, 196);
+}
+
+.project-notes-footer:hover {
+  cursor: pointer;
+  background-color: #464545;
+}
 
 /**************************** UTILITIES *******************************/
 

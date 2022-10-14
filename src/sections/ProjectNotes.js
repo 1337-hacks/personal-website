@@ -8,6 +8,7 @@ import ProjectNotesSC from '../media/project-notes-sc.jpg';
 function ProjectNotes() {
 
     return (
+        <>
         <div className="project-notes section">
             <Container>
                 <Stack gap={5}>
@@ -60,7 +61,18 @@ function ProjectNotes() {
                     </Row>
                 </Stack>
             </Container>
+            
         </div>
+        <div className="project-notes-footer">
+            <Container>
+                <Row>
+                    <Col className="vert-center" style={{justifyContent: "center"}}>
+                        <h4>Project:NOTES Repo</h4>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
+        </>
     );
 }
 

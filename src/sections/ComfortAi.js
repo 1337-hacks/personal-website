@@ -44,7 +44,7 @@ function ComfortAi() {
                 <Row>
                     <Col style={{paddingTop: "130px"}}>
                         <Stack gap={2}>
-                            <h3>The Problem</h3>
+                            <h3>Objective</h3>
                             <p>
                                 Without a website, Comfort.AI would have difficulties in exposing their brand especially 
                                 in these difficult times of the covid pandemic. As an intern, I along with three other 

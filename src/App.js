@@ -112,6 +112,8 @@ function App() {
                 <p>my-folder</p>
               </div>
 
+              {/*---------- ELIJAHS-FOLDER WINDOW ----------*/}
+
               <Draggable handle=".folder-handle" bounds=".App-body" disabled={disableWindows}>
                 <Fade in={folderSelect}>
                 <Container className="folder-window">
@@ -156,9 +158,11 @@ function App() {
                 </Fade>
               </Draggable>
 
+              {/*---------- WELCOME WINDOW ----------*/}
+
               <Draggable handle=".welcome-handle" bounds=".App-body" disabled={disableWelcome}>
                 <Fade in={welcomeNotif}>
-                  <Container className="notif-window">
+                  <Container className="welcome-window">
                     <Row className="welcome-handle vert-center">
                       <Col xs={2} align="left">
                         <Button variant="link" onClick={() => setWelcomeNotif(false)} disabled={disableWelcome}>
@@ -176,7 +180,8 @@ function App() {
                     <Row>
                       <Col align="left">
                         <p>
-                          Hello user, welcome to my personal site! Feel free to look around and chill B) - Elijah
+                          Hello user, my name is Elijah and welcome to my personal site! 
+                          Feel free to look around and enjoy :)
                         </p>
                       </Col>
                     </Row>
@@ -187,7 +192,7 @@ function App() {
             </Col>
           </Row>
           
-          <Row className="window-menu">
+          <Row className="window-taskbar">
             <Col style={{paddingLeft: "20px"}}>
               <Stack gap={1} direction="horizontal">
                 <Button variant="link" href="https://www.linkedin.com/in/elijah-nucum-b30673208/">

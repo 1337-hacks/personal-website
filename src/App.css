@@ -23,6 +23,14 @@ p.window-title {
   font-size: 1.5em;
 }
 
+a {
+  color: rgb(196, 196, 196);
+}
+
+a:hover {
+  color: rgb(156, 156, 156);
+}
+
 
 
 /**************************** APP WINDOW *******************************/
@@ -63,7 +71,7 @@ p.window-title {
   background-color: rgba(226, 226, 226, 0.575);
   border-radius: 5px;
   width: 30%;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .folder-handle {
@@ -187,17 +195,30 @@ p.window-title {
 
 /**************************** SECTION FOOTERS *******************************/
 
-.project-notes-footer {
+.section-footer {
   width: 100%;
   padding: 100px 0px 100px 0px;
-  background-color: #2e2e2e;
   color: rgb(196, 196, 196);
+}
+
+.project-notes-footer {
+  background-color: #1d1d1d;
 }
 
 .project-notes-footer:hover {
   cursor: pointer;
-  background-color: #464545;
+  background-color: #222222;
 }
+
+.project-notes-repo-link {
+  text-decoration: none;
+}
+
+.comfort-ai-footer {
+  background-color: #120b1a;
+}
+
+
 
 /**************************** UTILITIES *******************************/
 

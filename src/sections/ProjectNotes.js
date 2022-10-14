@@ -63,15 +63,17 @@ function ProjectNotes() {
             </Container>
             
         </div>
-        <div className="project-notes-footer">
-            <Container>
-                <Row>
-                    <Col className="vert-center" style={{justifyContent: "center"}}>
-                        <h4>Project:NOTES Repo</h4>
-                    </Col>
-                </Row>
-            </Container>
-        </div>
+        <a href="https://github.com/1337-hacks/Project-NOTES" className="project-notes-repo-link">
+            <div className=" section-footer project-notes-footer">
+                    <Container>
+                        <Row>
+                            <Col className="vert-center" style={{justifyContent: "center"}}>
+                                <h4>Project:NOTES Repo</h4>
+                            </Col>
+                        </Row>
+                    </Container>
+            </div>
+        </a>
         </>
     );
 }

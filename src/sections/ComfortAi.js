@@ -8,6 +8,7 @@ import ComfortAiSC from '../media/comfort-ai-sc.jpg';
 
 function ComfortAi() {
     return (
+        <>
         <div className="comfort-ai section">
             <Container>
                 <Row>
@@ -78,6 +79,42 @@ function ComfortAi() {
                 </Row>
             </Container>
         </div>
+        <div className="section-footer comfort-ai-footer">
+                <Container>
+                    <Row>
+                        <Col>
+                            <Stack gap={2}>
+                                <h4>Date</h4>
+                                <p>2020</p>
+                            </Stack>
+                        </Col>
+                        <Col>
+                            <Stack gap={2}>
+                                <h4>Skills Gained</h4>
+                                <ul>
+                                    <li><p>WordPress development</p></li>
+                                    <li><p>Agile methodologies</p></li>
+                                    <li><p>Project management</p></li>
+                                    <li><p>Wireframing</p></li>
+                                </ul>
+                            </Stack>
+                        </Col>
+                        <Col>
+                            <Stack gap={2}>
+                                <h4>Company</h4>
+                                <p>Comfort.AI</p>
+                            </Stack>
+                        </Col>
+                        <Col>
+                            <Stack gap={2}>
+                                <h4>Site</h4>
+                                <p><a href="https://comfortai.co.nz">https://comfortai.co.nz</a></p>
+                            </Stack>
+                        </Col>
+                    </Row>
+                </Container>
+        </div>
+        </>
     );
 }
 

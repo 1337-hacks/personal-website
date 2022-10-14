@@ -109,16 +109,19 @@ function App() {
                   size={3}
                   color="#F8DB92"
                 />
-                <p>my-folder</p>
+                <p>elijah's-folder</p>
               </div>
 
               {/*---------- ELIJAHS-FOLDER WINDOW ----------*/}
 
               <Draggable handle=".folder-handle" bounds=".App-body" disabled={disableWindows}>
-                <Fade in={folderSelect}>
+                <Fade in={folderSelect} unmountOnExit={true}>
                 <Container className="folder-window">
                   <Row className="folder-handle vert-center">
-                    <Col xs={2} align="left">
+                    <Col align="left">
+                      <p className="window-title">elijah's-folder</p>
+                    </Col>
+                    <Col xs={2}>
                       <Button variant="link" onClick={() => setFolderSelect(false)} disabled={disableWindows}>
                         <Icon
                           path={mdiCloseCircle}
@@ -127,10 +130,6 @@ function App() {
                         />
                       </Button>
                     </Col>
-                    <Col align="center">
-                      <p className="window-title">my-folder</p>
-                    </Col>
-                    <Col xs={2}></Col>
                   </Row>
                   <Row>
                     <GridSystem colCount={2} md={6}>
@@ -161,10 +160,13 @@ function App() {
               {/*---------- WELCOME WINDOW ----------*/}
 
               <Draggable handle=".welcome-handle" bounds=".App-body" disabled={disableWelcome}>
-                <Fade in={welcomeNotif}>
+                <Fade in={welcomeNotif} unmountOnExit={true}>
                   <Container className="welcome-window">
                     <Row className="welcome-handle vert-center">
-                      <Col xs={2} align="left">
+                      <Col align="left">
+                        <p className="window-title">welcome-user!</p>
+                      </Col>
+                      <Col xs={2}>
                         <Button variant="link" onClick={() => setWelcomeNotif(false)} disabled={disableWelcome}>
                           <Icon
                             path={mdiCloseCircle}
@@ -172,9 +174,6 @@ function App() {
                             color="#CF5C36"
                           />
                         </Button>
-                      </Col>
-                      <Col align="center">
-                        <p className="window-title">welcome-user!</p>
                       </Col>
                     </Row>
                     <Row>
@@ -191,6 +190,8 @@ function App() {
 
             </Col>
           </Row>
+
+          {/*---------- WINDOW TASKBAR ----------*/}
           
           <Row className="window-taskbar">
             <Col style={{paddingLeft: "20px"}}>

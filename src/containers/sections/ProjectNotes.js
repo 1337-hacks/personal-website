@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Stack from 'react-bootstrap/Stack'
-import ProjectNotesSC from '../media/project-notes-sc.jpg';
+import ProjectNotesSC from '../../media/project-notes-sc.jpg';
 
 function ProjectNotes() {
 

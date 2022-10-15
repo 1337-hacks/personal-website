@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import imageOfMe from '../media/me.jpg';
+import imageOfMe from '../../media/me.jpg';
 import Stack from 'react-bootstrap/Stack';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Icon from '@mdi/react';

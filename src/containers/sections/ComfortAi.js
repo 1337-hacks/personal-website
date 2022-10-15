@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Stack from 'react-bootstrap/Stack';
-import ComfortAiSC from '../media/comfort-ai-sc.jpg';
+import ComfortAiSC from '../../media/comfort-ai-sc.jpg';
 
 
 function ComfortAi() {

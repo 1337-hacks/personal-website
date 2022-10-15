@@ -11,22 +11,18 @@ function WelcomeWindow(props) {
     const [disableWelcome, setDisableWelcome] = useState(false);
 
     useEffect(()=> {
-        if(welcomeBuffer) {
-        // no action
-        }
-        else {
-        const timer = setTimeout(()=> setWelcomeNotif(true), 2000);
-        return (()=> clearTimeout(timer));
+        if(!welcomeBuffer) {
+            const timer = setTimeout(()=> setWelcomeNotif(true), 3000);
+            return (()=> clearTimeout(timer));
         }
     }, [welcomeNotif])
 
     useEffect(()=> {
-        console.log(welcomeNotif);
         if(welcomeNotif === false) {
-        setDisableWelcome(true);
+            setDisableWelcome(true);
         }
         else {
-        setDisableWelcome(false);
+            setDisableWelcome(false);
         }
     }, [welcomeNotif])
 

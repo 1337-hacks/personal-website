@@ -14,11 +14,6 @@ import { mdiLinkedin, mdiGithub, mdiAccountCircle, mdiCloseCircle, mdiFolder } f
 
 import Icon from '@mdi/react';
 
-import Draggable from 'react-draggable';
-
-import GridSystem from '../components/GridSystem';
-
-
 function Desktop(props) {
 
     const [fileSelect, setFileSelect] = useState("");

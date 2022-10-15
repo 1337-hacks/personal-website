@@ -35,6 +35,19 @@ a:hover {
 
 /**************************** APP WINDOW *******************************/
 
+.loading-screen {
+  background-color: #111111;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  color: rgb(255, 255, 255);
+}
+
+
+
+/**************************** APP WINDOW *******************************/
+
 .App-body {
   /* background-color: #151415; */
   background-color: #212121;

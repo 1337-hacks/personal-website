@@ -1,8 +1,5 @@
 import React from "react";
-import { Container } from 'react-bootstrap';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Stack from 'react-bootstrap/Stack';
+import { Container, Row, Col, Stack } from 'react-bootstrap';
 import ComfortAiSC from '../../media/comfort-ai-sc.jpg';
 
 

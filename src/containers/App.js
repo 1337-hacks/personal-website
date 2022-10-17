@@ -2,7 +2,7 @@ import './App.css';
 import React, {useState, useEffect, createRef} from 'react';
 import { Fade, Button } from 'react-bootstrap';
 import Desktop from './Desktop';
-import LoadingScreen from './LoadingScreen';
+import ArtificialLoadingScreen from './ArtificialLoadingScreen';
 
 function App() {
 
@@ -15,22 +15,13 @@ function App() {
 
   const [loadState, setLoadState] = useState(false);
 
-  useEffect(()=> {
-    if(!loadState) {
-      const timer = setTimeout(()=> setLoadState(true), 4000);
-      return (()=> clearTimeout(timer));
-    }
-  }, [loadState])
-
   // Loading screen will perform some actions within it, and once it is finished
-  // it will send a request above here to App.js to set laod state to true and
+  // it will send a request above here to App.js to set load state to true and
   // remove the loading screen.
 
   return (
     <>
-      <Fade in={!loadState} unmountOnExit={true}>
-        <LoadingScreen/>
-      </Fade>
+      <ArtificialLoadingScreen pushLoadState={()=>setLoadState(true)}/>
 
       {loadState && <Desktop files={presetFiles}/>}
     </>

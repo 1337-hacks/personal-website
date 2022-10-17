@@ -54,7 +54,7 @@ function WelcomeWindow(props) {
                     <Row style={{padding: "10px"}}>
                     <Col align="left">
                         <p style={{margin: "0px"}}>
-                        Hello user, my name is Elijah and welcome to my personal site! 
+                        Hello user, my name is Elijah! Welcome to my personal site. 
                         Feel free to look around and enjoy :)
                         </p>
                     </Col>

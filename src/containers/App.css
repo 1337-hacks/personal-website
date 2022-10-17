@@ -38,10 +38,12 @@ a:hover {
 .loading-screen {
   background-color: #111111;
   min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   color: rgb(255, 255, 255);
+  position: absolute;
 }
 
 
